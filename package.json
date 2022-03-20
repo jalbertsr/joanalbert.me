@@ -1,7 +1,7 @@
 {
-  "name": "craftzdog-homepage",
+  "name": "joanalbert.me",
   "version": "1.0.0",
-  "description": "Takuya's website",
+  "description": "Joan Albert's website",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
@@ -9,8 +9,12 @@
     "prettier": "prettier --write .",
     "lint": "next lint"
   },
-  "keywords": [],
-  "author": "Takuya Matsuyama",
+  "keywords": [
+    "homepage",
+    "portofolio",
+    "cv"
+  ],
+  "author": "Joan Albert Segura Rueda <jalbertsr@protonmail.ch>",
   "license": "MIT",
   "dependencies": {
     "@chakra-ui/icons": "^1.1.1",

@@ -7,12 +7,12 @@ import {
   ListItem,
   UnorderedList,
   Heading,
-  Center
-} from '@chakra-ui/react'
-import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
-import Layout from '../../components/layouts/article'
+  Center,
+} from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { Title, WorkImage, Meta } from '../../components/work';
+import P from '../../components/paragraph';
+import Layout from '../../components/layouts/article';
 
 const Work = () => (
   <Layout title="The four painters">
@@ -93,7 +93,7 @@ const Work = () => (
       <WorkImage src="/images/works/the-four-painters_02.jpg" alt="walknote" />
     </Container>
   </Layout>
-)
+);
 
-export default Work
-export { getServerSideProps } from '../../components/chakra'
+export default Work;
+export { getServerSideProps } from '../../components/chakra';

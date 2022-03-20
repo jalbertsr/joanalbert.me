@@ -7,12 +7,12 @@ import {
   ListItem,
   SimpleGrid,
   UnorderedList,
-  Image
-} from '@chakra-ui/react'
-import Layout from '../../components/layouts/article'
-import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+  Image,
+} from '@chakra-ui/react';
+import Layout from '../../components/layouts/article';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { Title, WorkImage, Meta } from '../../components/work';
+import P from '../../components/paragraph';
 
 const Work = () => (
   <Layout title="Menkiki (麺利き)">
@@ -89,7 +89,7 @@ const Work = () => (
       </SimpleGrid>
     </Container>
   </Layout>
-)
+);
 
-export default Work
-export { getServerSideProps } from '../../components/chakra'
+export default Work;
+export { getServerSideProps } from '../../components/chakra';

@@ -1,4 +1,4 @@
-import NextLink from 'next/link'
+import NextLink from 'next/link';
 import {
   Link,
   Container,
@@ -9,22 +9,22 @@ import {
   List,
   ListItem,
   useColorModeValue,
-  chakra
-} from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
-import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
-import Layout from '../components/layouts/article'
-import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
-import Image from 'next/image'
+  chakra,
+} from '@chakra-ui/react';
+import { ChevronRightIcon } from '@chakra-ui/icons';
+import Paragraph from '../components/paragraph';
+import { BioSection, BioYear } from '../components/bio';
+import Layout from '../components/layouts/article';
+import Section from '../components/section';
+import { GridItem } from '../components/grid-item';
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5';
+import thumbYouTube from '../public/images/links/youtube.png';
+import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png';
+import Image from 'next/image';
 
 const ProfileImage = chakra(Image, {
-  shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
-})
+  shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop),
+});
 
 const Home = () => (
   <Layout>
@@ -60,12 +60,12 @@ const Home = () => (
             h="100px"
             display="inline-block"
             borderRadius="full"
-            overflow='hidden'
+            overflow="hidden"
           >
             <ProfileImage
               src="/images/takuya.jpg"
               alt="Profile image"
-              borderRadius='full'
+              borderRadius="full"
               width="100%"
               height="100%"
             />
@@ -217,7 +217,7 @@ const Home = () => (
       </Section>
     </Container>
   </Layout>
-)
+);
 
-export default Home
-export { getServerSideProps } from '../components/chakra'
+export default Home;
+export { getServerSideProps } from '../components/chakra';
