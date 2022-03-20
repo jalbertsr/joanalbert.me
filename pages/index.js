@@ -1,10 +1,10 @@
+import Image from 'next/image';
 import NextLink from 'next/link';
 import {
   Link,
   Container,
   Heading,
   Box,
-  SimpleGrid,
   Button,
   List,
   ListItem,
@@ -16,11 +16,7 @@ import Paragraph from '../components/paragraph';
 import { BioSection, BioYear } from '../components/bio';
 import Layout from '../components/layouts/article';
 import Section from '../components/section';
-import { GridItem } from '../components/grid-item';
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5';
-import thumbYouTube from '../public/images/links/youtube.png';
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png';
-import Image from 'next/image';
+import { IoLogoTwitter, IoLogoGithub } from 'react-icons/io5';
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop),
@@ -36,15 +32,15 @@ const Home = () => (
         textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
       >
-        Hello, I&apos;m a full-stack developer based in Japan!
+        Hello, I&apos;m a Software Engineer based in Barcelona!
       </Box>
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Takuya Matsuyama
+            Joan Albert
           </Heading>
-          <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+          <p>Digital Craftsman ( Developer & Freethinker )</p>
         </Box>
         <Box
           flexShrink={0}
@@ -63,7 +59,7 @@ const Home = () => (
             overflow="hidden"
           >
             <ProfileImage
-              src="/images/takuya.jpg"
+              src="/images/profile.png"
               alt="Profile image"
               borderRadius="full"
               width="100%"
@@ -78,16 +74,15 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <NextLink href="/works/inkdrop" scroll={false}>
-            <Link>Inkdrop</Link>
-          </NextLink>
-          .
+          Joan Albert is a freelance and a full-stack developer based in
+          Barcelona with a passion for building digital services/stuff he wants.
+          He has a knack for solving real-life problems with code. When not
+          online, he loves traveling or practicing some extreme sport.
+          Currently, he co-founded his own company,&nbsp;
+          <Link href="https://swipoo.com/" isExternal>
+            Swipoo
+          </Link>
+          ,&nbsp;and he&apos;s leading the engineering team as a CTO.
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works" scroll={false}>
@@ -103,22 +98,40 @@ const Home = () => (
           Bio
         </Heading>
         <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
+          <BioYear>1996</BioYear>
+          Born in Barcelona, Catalonia, Spain.
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&apos;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
+          <BioYear>2014</BioYear>
+          Enrolled in the&nbsp;
+          <Link href="https://www.uab.cat/" isExternal>
+            UAB
+          </Link>
+          &nbsp;Computer Engineering Degree.
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
+          <BioYear>2017</BioYear>
+          Work @&nbsp;
+          <Link href="https://kiwi.com/" isExternal>
+            Kiwi.com
+          </Link>
+          &nbsp;- Fullstack Developer
         </BioSection>
         <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Works as a freelance
+          <BioYear>2020</BioYear>
+          Work @&nbsp;
+          <Link href="https://www.manomano.fr/" isExternal>
+            ManoMano
+          </Link>
+          &nbsp;- Fullstack Developer
+        </BioSection>
+        <BioSection>
+          <BioYear>2021</BioYear>
+          Work @&nbsp;
+          <Link href="https://www.capchase.com/" isExternal>
+            Capchase
+          </Link>
+          &nbsp;- Software Engineer
         </BioSection>
       </Section>
 
@@ -127,15 +140,8 @@ const Home = () => (
           I ♥
         </Heading>
         <Paragraph>
-          Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
-            Drawing
-          </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
-          , Leica, Machine Learning
+          Travelling, Coding, Food (😋), Sports, Learning and exploring (about
+          anything)
         </Paragraph>
       </Section>
 
@@ -145,70 +151,30 @@ const Home = () => (
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
+            <Link href="https://github.com/jalbertsr" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoGithub />}
               >
-                @craftzdog
+                @jalbertsr
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
+            <Link href="https://twitter.com/joanalbertsr" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoTwitter />}
               >
-                @inkdrop_app (English)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoInstagram />}
-              >
-                @craftzdog
+                @joanalbertsr
               </Button>
             </Link>
           </ListItem>
         </List>
-
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
-            thumbnail={thumbYouTube}
-          >
-            My YouTube channel
-          </GridItem>
-          <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbInkdrop}
-          >
-            A Markdown note-taking app
-          </GridItem>
-        </SimpleGrid>
-
         <Box align="center" my={4}>
-          <NextLink href="/posts" scroll={false}>
+          <NextLink href="#" scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               Popular posts
             </Button>

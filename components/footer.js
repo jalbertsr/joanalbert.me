@@ -1,9 +1,11 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Link } from '@chakra-ui/react';
 
 const Footer = () => {
   return (
     <Box align="center" opacity={0.4} fontSize="sm">
-      &copy; {new Date().getFullYear()} Takuya Matsuyama. All Rights Reserved.
+      Based in&nbsp;
+      <Link href="https://www.craftz.dog/" isExternal>Takuya Matsuyama&apos;s</Link>
+      &nbsp;Hompage
     </Box>
   );
 };
