@@ -22,24 +22,20 @@ const LogoBox = styled.span`
   }
 `;
 
-const Logo = () => {
-  const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`;
-
-  return (
-    <Link href="/" scroll={false} passHref>
-      <LogoBox>
-        <FootprintIcon />
-        <Text
-          color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-          fontFamily='M PLUS Rounded 1c", sans-serif'
-          fontWeight="bold"
-          ml={3}
-        >
-          Joan Albert
-        </Text>
-      </LogoBox>
-    </Link>
-  );
-};
+const Logo = () => (
+  <Link href="/" scroll={false} passHref>
+    <LogoBox>
+      <FootprintIcon />
+      <Text
+        color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+        fontFamily='M PLUS Rounded 1c", sans-serif'
+        fontWeight="bold"
+        ml={3}
+      >
+        Joan Albert
+      </Text>
+    </LogoBox>
+  </Link>
+);
 
 export default Logo;
