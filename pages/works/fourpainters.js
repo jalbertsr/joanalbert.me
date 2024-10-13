@@ -78,9 +78,8 @@ const Work = () => (
       <Box>
         <iframe
           src="https://player.vimeo.com/video/146373709"
-          width="100%"
-          height="400"
-          frameBorder="0"
+          width={100}
+          height={400}
           allowFullScreen
         />
       </Box>

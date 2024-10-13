@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import NextLink from 'next/link';
+import Image from 'next/image';
 import {
   Link,
   Container,
@@ -9,7 +9,6 @@ import {
   List,
   ListItem,
   useColorModeValue,
-  chakra,
 } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import Paragraph from '../components/paragraph';
@@ -17,10 +16,6 @@ import { BioSection, BioYear } from '../components/bio';
 import Layout from '../components/layouts/article';
 import Section from '../components/section';
 import { IoLogoTwitter, IoLogoGithub } from 'react-icons/io5';
-
-const ProfileImage = chakra(Image, {
-  shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop),
-});
 
 const Home = () => (
   <Layout>
@@ -58,12 +53,11 @@ const Home = () => (
             borderRadius="full"
             overflow="hidden"
           >
-            <ProfileImage
+            <Image
               src="/images/profile.png"
               alt="Profile image"
-              borderRadius="full"
-              width="100%"
-              height="100%"
+              width={100}
+              height={100}
             />
           </Box>
         </Box>
@@ -85,11 +79,15 @@ const Home = () => (
           ,&nbsp;and he&apos;s leading the engineering team as a CTO.
         </Paragraph>
         <Box align="center" my={4}>
-          <NextLink href="/works" scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My portfolio
-            </Button>
-          </NextLink>
+          <Button
+            as={NextLink}
+            rightIcon={<ChevronRightIcon />}
+            href="/works"
+            scroll={false}
+            colorScheme="teal"
+          >
+            My portfolio
+          </Button>
         </Box>
       </Section>
 
@@ -174,11 +172,15 @@ const Home = () => (
           </ListItem>
         </List>
         <Box align="center" my={4}>
-          <NextLink href="#" scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              Popular posts
-            </Button>
-          </NextLink>
+          <Button
+            as={NextLink}
+            rightIcon={<ChevronRightIcon />}
+            href="#"
+            scroll={false}
+            colorScheme="teal"
+          >
+            Popular posts
+          </Button>
         </Box>
       </Section>
     </Container>
