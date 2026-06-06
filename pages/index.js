@@ -73,10 +73,10 @@ const Home = () => (
           He has a knack for solving real-life problems with code. When not
           online, he loves traveling or practicing some extreme sport.
           Currently, he co-founded his own company,&nbsp;
-          <Link href="https://swipoo.com/" isExternal>
+          <Link href="https://swipoo.com" isExternal>
             Swipoo
           </Link>
-          ,&nbsp;and he&apos;s leading the engineering team as a CTO.
+          ,&nbsp;and he&apos;s leading the product and engineering team.
         </Paragraph>
         <Box align="center" my={4}>
           <Button
